@@ -2,7 +2,7 @@ defmodule Mylist do
   def filter([], func, f_array), do: f_array
   def filter([head|tail], func, f_array // []) do
     if func.(head) do
-      filter(tail, func, List.concat(f_array , [head]))
+       filter(tail, func, List.concat(f_array , [head]))
     else
       filter(tail, func, List.concat(f_array , []))
     end
